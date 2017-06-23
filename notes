@@ -1,0 +1,11 @@
+docker build -t azkaban-development .
+
+docker run -it --entrypoint /bin/bash azkaban-development
+
+docker run -p8081:8081 -it --name azkaban-develop --entrypoint /bin/bash azkaban-development 
+
+docker run -p 8081:8081 azkaban-development
+
+docker create  --name azkaban-development azkaban-development
+
+docker exec -ti azkaban-development /bin/bash
